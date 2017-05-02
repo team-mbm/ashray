@@ -56,6 +56,8 @@ LOCAL_APPS = [
     # custom users app
     'ashray.users.apps.UsersConfig',
     # Your stuff: custom apps go here
+    'cases',
+    'volunteers',
 ]
 
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
@@ -110,6 +112,12 @@ MANAGERS = ADMINS
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#databases
 DATABASES = {
     'default': env.db('DATABASE_URL', default='postgres:///ashray'),
+    'anganwadi': {
+        'NAME': 'anganwadi',
+        'ENGINE': 'django.db.backends.postgresql',
+        'USER': 'postgres',
+        'PASSWORD': ''
+    }
 }
 DATABASES['default']['ATOMIC_REQUESTS'] = True
 
