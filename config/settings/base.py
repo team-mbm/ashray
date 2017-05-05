@@ -58,6 +58,8 @@ LOCAL_APPS = [
     # Your stuff: custom apps go here
     'cases',
     'volunteers',
+    'anganwadi',
+    'child_labour_association',
 ]
 
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
@@ -112,9 +114,22 @@ MANAGERS = ADMINS
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#databases
 DATABASES = {
     'default': env.db('DATABASE_URL', default='postgres:///ashray'),
-
+    'anganwadi': {
+        'ENGINE':   'django.db.backends.postgresql',
+        'NAME':     'anganwadi',
+        'USER':     'nishit',
+        'PASSWORD': 'nishit',
+        'HOST': 'localhost',
+    },
+    'child_labour_association': {
+        'ENGINE':   'django.db.backends.postgresql',
+        'NAME':     'child_labour_association',
+        'USER':     'nishit',
+        'PASSWORD': 'nishit',
+        'HOST': 'localhost',
+    },
 }
-DATABASES['default']['ATOMIC_REQUESTS'] = True
+# DATABASES['default']['ATOMIC_REQUESTS'] = True
 
 
 # GENERAL CONFIGURATION
