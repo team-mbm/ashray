@@ -49,6 +49,7 @@ THIRD_PARTY_APPS = [
     'allauth',  # registration
     'allauth.account',  # registration
     'allauth.socialaccount',  # registration
+    'rest_framework', #django rest framework pkg
 ]
 
 # Apps specific for this project go here.
@@ -117,15 +118,15 @@ DATABASES = {
     'anganwadi': {
         'ENGINE':   'django.db.backends.postgresql',
         'NAME':     'anganwadi',
-        'USER':     'nishit',
-        'PASSWORD': 'nishit',
+        'USER':     'zuck007',
+        'PASSWORD': 'password',
         'HOST': 'localhost',
     },
     'child_labour_association': {
         'ENGINE':   'django.db.backends.postgresql',
         'NAME':     'child_labour_association',
-        'USER':     'nishit',
-        'PASSWORD': 'nishit',
+        'USER':     'zuck007',
+        'PASSWORD': 'password',
         'HOST': 'localhost',
     },
 }

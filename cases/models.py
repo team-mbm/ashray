@@ -12,7 +12,6 @@ class Location(models.Model):
     def __str__(self):
         return str(self.street_number) + " " + str(self.city)
 
-
 class Contact(models.Model):
     contact_number = models.CharField(_("Contact Number"), max_length=20, blank=True)
     email = models.CharField(_("Email"), max_length=20, blank=True)
@@ -31,7 +30,6 @@ class TypeOfCase(models.Model):
 
 
 class Case(models.Model):
-
     case_filer_name = models.CharField(_("Complaintee Name"), max_length=20, blank=True)
     contact = models.ForeignKey("Contact", blank=True, null=True)
     name_child = models.CharField(_("Name of Child"), max_length=20)
