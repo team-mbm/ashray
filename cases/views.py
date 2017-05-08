@@ -1,8 +1,14 @@
 from django.shortcuts import render
 from rest_framework import viewsets, permissions, status
 from rest_framework.response import Response
-from cases.serializers import CaseSerializer, TypeOfCaseSerializer, LocationSerializer, ContactSerializer
-from cases.models import Case, TypeOfCase, Location, Contact
+from cases.serializers import PostalCodeSerializer, CaseSerializer, TypeOfCaseSerializer, LocationSerializer, ContactSerializer
+from cases.models import Case, TypeOfCase, Location, Contact, PostalCode
+
+
+class PostalCodeViewSet(viewsets.ModelViewSet):
+    serializer_class = PostalCodeSerializer
+    queryset = PostalCode.objects.all()
+    permission_classes = [permissions.AllowAny]
 
 
 class TypeOfCaseViewSet(viewsets.ModelViewSet):

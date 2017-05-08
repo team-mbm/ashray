@@ -2,6 +2,17 @@ from django.db import models
 from django.utils.translation import ugettext_lazy as _
 
 
+class PostalCode(models.Model):
+    """
+    model to store postalcodes,city and state,
+    will be used in dropdown list on Frontend part to fill city and state in Location part
+    """
+    pin_code = models.CharField(_("Pin Code"), primary_key=True, max_length=20, blank=False, null=False)
+    post_office = models.CharField(_("Post Office"), max_length=40, blank=True)
+    city = models.CharField(_("City"), max_length=20, blank=True)
+    state = models.CharField(_("State"), max_length=20, blank=True)
+
+
 class Location(models.Model):
     street_number = models.CharField(_("Street Number"), max_length=20, blank=True)
     city = models.CharField(_("City"), max_length=20, blank=True)

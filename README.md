@@ -4,6 +4,8 @@ $ git clone https://github.com/team-mbm/ashray.git
 $ workon myfinalyearproject
 $ pip install -r zuck_requirements.txt
 ```
+## Filling postal code
+* ![payload](./rest_json_payloads_testing/postal_code_payload.py)
 ## Snapshot
-* Cases api shell test 
-![snap1](./cases_api_shell_sample.png)
+* Postal code sample get request via http://api_link/pin_code
+![snap1](./postalcodesample.png)
