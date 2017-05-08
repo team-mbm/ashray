@@ -56,6 +56,10 @@ LOCAL_APPS = [
     # custom users app
     'ashray.users.apps.UsersConfig',
     # Your stuff: custom apps go here
+    'cases',
+    'volunteers',
+    'anganwadi',
+    'child_labour_association',
 ]
 
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
@@ -110,8 +114,23 @@ MANAGERS = ADMINS
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#databases
 DATABASES = {
     'default': env.db('DATABASE_URL', default='postgres:///ashray'),
+    'anganwadi': {
+        'ENGINE':   'django.db.backends.postgresql',
+        'NAME':     'anganwadi',
+        'USER':     'nishit',
+        'PASSWORD': 'nishit',
+        'HOST': 'localhost',
+    },
+    'child_labour_association': {
+        'ENGINE':   'django.db.backends.postgresql',
+        'NAME':     'child_labour_association',
+        'USER':     'nishit',
+        'PASSWORD': 'nishit',
+        'HOST': 'localhost',
+    },
 }
-DATABASES['default']['ATOMIC_REQUESTS'] = True
+# DATABASES['default']['ATOMIC_REQUESTS'] = True
+
 
 
 # GENERAL CONFIGURATION
@@ -221,7 +240,6 @@ PASSWORD_HASHERS = [
     'django.contrib.auth.hashers.BCryptSHA256PasswordHasher',
     'django.contrib.auth.hashers.BCryptPasswordHasher',
 ]
-
 # PASSWORD VALIDATION
 # https://docs.djangoproject.com/en/dev/ref/settings/#auth-password-validators
 # ------------------------------------------------------------------------------
@@ -272,3 +290,4 @@ ADMIN_URL = r'^admin/'
 
 # Your common stuff: Below this line define 3rd party library settings
 # ------------------------------------------------------------------------------
+
