@@ -61,6 +61,7 @@ LOCAL_APPS = [
     'volunteers',
     'anganwadi',
     'child_labour_association',
+    'route_complaints'
 ]
 
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps

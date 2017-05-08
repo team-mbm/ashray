@@ -1,0 +1,12 @@
+{
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/.DS_Store": true,
+        "**/*.pyc":true,
+        "**/migrations":true
+    },
+    "python.linting.pep8Enabled": true,
+    "python.venvPath": "/home/zuck007/.virtualenvs/FinalYearProject/"
+}
