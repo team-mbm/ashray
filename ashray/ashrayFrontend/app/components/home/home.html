@@ -1,5 +1,77 @@
 <div ng-controller='HomeController as ctrl'>  
-    <div>
-        <h1>Home!</h1>
-    </div>
+    	<div class="container">
+    	<div class="row">
+        <div class="col-md-6" >
+        	<h1>ASHRAY - Inhibatation Center</h1>
+        	<p>Welcome to the Ashray Inhibitation Center (AIC)! We are a Non Government organisation (NGO) in various states of India, dedicated to give shelter to children in need. We work with 3000 or so people at different levels and collaborate with few other NGOs. AIC welcomes complaints from across the country, analyses the complaint and gives it a priority level. Children with higher priority get shelter at Ashray for minimum of 90 days. </p>
+
+			<p>The first focus of AIC is the health of the residents who face problems like overcrowding, malnutrition, and diseases like tuberculosis. To treat everyday ailments, AIC runs a free walk-in clinic open six days a week, and once a week, Dr. Bhatnagar comes in for free consultations, generously donating his time. To help prevent illness from occurring we also give our school children nutritious chyawanprash and milk each day and soap each month (pictured below).</p>
+
+			<p>Beyond meeting immediate needs, AIC is working for a brighter future. In our K-5 school, we teach approximately 70 children, not only about the core academic subjects, but about the essential topics of cleanliness, health, civic duty, and the environment. ACT’s evening coaching classes, serving students in classes 6-12, offer help with both schoolwork and state examination preparation. For women of all ages, ACT’s sewing classes teach a skill that is useful both for housework and earning wages.</p>
+
+			<p>For all of the work it does, AIC depends on generous donations of time and money by its volunteers and donors. Take a minute to read more about AIC, our projects, and our community, and then if you are able, please</p>
+        </div>
+        <div class="col-md-6" >
+        	<h1>Complaint Form</h1>
+        	<form>
+        		<h4 style="color:red"> Your Details </h4>
+        		<div class="form-group">
+			    <label for="complainteeName">Name</label>
+			    <input type="text" class="form-control" id="complainteeName" placeholder="Your Name">
+			  	</div>
+        		<div class="form-group">
+			    <label for="complainteeEmail">Email address</label>
+			    <input type="email" class="form-control" id="complainteeEmail" placeholder="YOur Email address">
+			  	</div>
+			  	<div class="form-group">
+			    <label for="complainteeContact">Contact Number</label>
+			    <input type="text" class="form-control" id="complainteeContact" placeholder="Your phone Number">
+			  	</div>
+
+			  	<h4 style="color:red"> Child's Details </h4>
+
+			  	<div class="form-group">
+			  	<label for="childName">Name</label>
+			  	<input type="text" class="form-control" id="childName" placeholder="Child's Name">
+			  	</div>
+			  	<div class="form-group">
+			  	<label for="childAge">Age</label>
+			  	<input type="text" class="form-control" id="childAge" placeholder="Child's Age">
+			  	</div>
+			  	<div class="form-group">
+			  	<label for="childDescription">Description</label>
+			  	<textarea type="text" class="form-control" id="childDesc" placeholder="Description"></textarea>
+			  	</div>
+			  	<div class="form-group">
+			  	<label for="childLocation">Location</label>
+			  	<input type="text" class="form-control" id="childStreetNo" placeholder="Street number">
+			  	<input type="text" class="form-control" id="childpinCode" placeholder="Pin code">
+			  	<input type="text" class="form-control" id="childcity" placeholder="City" disabled>
+			  	<input type="text" class="form-control" id="childcity" placeholder="State"disabled>
+			  	</div>
+			  	 <div class="form-group">
+				  <label for="childCase">Case</label>
+				  <select class="form-control" id="childCase">
+				    <option>1</option>
+				    <option>2</option>
+				    <option>3</option>
+				    <option>4</option>
+				  </select>
+				</div>
+			  	<!--
+				<div class="form-group">
+				<label for="exampleInputFile">File input</label>
+				<input type="file" id="exampleInputFile">
+				<p class="help-block">Example block-level help text here.</p>
+				</div>
+			  <div class="checkbox">
+			    <label>
+			      <input type="checkbox"> Check me out
+			    </label>
+			  </div> -->
+			  <button type="submit" class="btn btn-danger">Submit</button>
+        	</form>
+        </div>
+      	</div>
+      	</div>
 </div>  

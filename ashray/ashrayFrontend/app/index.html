@@ -2,12 +2,38 @@
 <!DOCTYPE html>  
 <html ng-app="myApp">  
   <head>
-    <title>My Site</title>
+  	<meta charset="utf-8">
+  	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ashray - Inhabitation Centre</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/bootstrap.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/bootstrap-theme.css' %}">
     <script src="{% static 'dist/js/bundle.js' %}"></script>
+    <script src="{% static 'assets/js/bootstrap.js' %}"></script>
   	<base href="/">
   </head>
   <body>
-
+  <nav class="navbar navbar-inverse bg-primary">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">Ashray</a>
+      </div>
+    <ul class="nav navbar-nav">
+        <li><a href="#">Home</a></li>
+      <li><a href="#!/createAccount">Be a Volunteer</a></li>
+      <li><a href="#!/createAccount">Donate</a></li>
+      <li><a href="#!/formStatus">Complaint Status</a></li>
+      <li><a href="">Recent Activities</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+    {% if user.is_authenticated %}
+      <li><a href="">Logout</a></li>
+    {% else %}
+      <li><a href="#!/login">Login / Sign up</a></li>
+    {% endif %}
+    </ul>
+  </div>
+</nav>
   	<div ng-view></div>
   </body>
 </html>  
