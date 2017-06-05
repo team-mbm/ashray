@@ -46,3 +46,18 @@ class Case(models.Model):
 
     def __str__(self):
         return str(self.case_filer_name)
+
+class name2(models.Model):
+
+    name = models.CharField(max_length=20)
+
+    def __str__(self):
+        return self.name
+
+
+class name3(models.Model):
+
+    name = models.CharField(max_length=20)
+
+    def __str__(self):
+        return self.name

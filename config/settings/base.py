@@ -59,7 +59,7 @@ LOCAL_APPS = [
     'cases',
     'volunteers',
     'anganwadi',
-    'child_labour_association',
+    'child_labour_association'
 ]
 
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
@@ -113,7 +113,13 @@ MANAGERS = ADMINS
 # ------------------------------------------------------------------------------
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#databases
 DATABASES = {
-    'default': env.db('DATABASE_URL', default='postgres:///ashray'),
+    'default': {
+        'ENGINE':   'django.db.backends.postgresql',
+        'NAME':     'ashray',
+        'USER':     'nishit',
+        'PASSWORD': 'nishit',
+        'HOST': 'localhost',
+    },
     'anganwadi': {
         'ENGINE':   'django.db.backends.postgresql',
         'NAME':     'anganwadi',
@@ -121,7 +127,7 @@ DATABASES = {
         'PASSWORD': 'nishit',
         'HOST': 'localhost',
     },
-    'child_labour_association': {
+    'child_labour': {
         'ENGINE':   'django.db.backends.postgresql',
         'NAME':     'child_labour_association',
         'USER':     'nishit',
@@ -131,7 +137,11 @@ DATABASES = {
 }
 # DATABASES['default']['ATOMIC_REQUESTS'] = True
 
-
+DATABASE_ROUTERS =['cases.routers.cases_router',]
+DB_Mapping = {
+    "anganwadi": "anganwadi",
+    "child_labour_association": "child_labour",
+}
 # GENERAL CONFIGURATION
 # ------------------------------------------------------------------------------
 # Local time zone for this installation. Choices can be found here:
