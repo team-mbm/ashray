@@ -1,0 +1,24 @@
+git add .
+
+echo -n "enter the message"
+
+read msg
+
+git commit -m msg
+
+git checkout master
+
+git pull pb master
+
+echo -n "Enter the branch name"
+
+read branch
+
+git checkout branch 
+
+git merge master
+
+git checkout branch
+
+git push pb branch
+
